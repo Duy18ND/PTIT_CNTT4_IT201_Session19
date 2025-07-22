@@ -10,6 +10,7 @@ Node* createNode(int data) {
     node->data = data;
     node->left = NULL;
     node->right = NULL;
+    return node;
 }
 typedef struct Queue {
     Node **arr;

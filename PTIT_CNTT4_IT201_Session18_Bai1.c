@@ -16,9 +16,9 @@ void preorderDFS(Node* root) {
     if (root == NULL) return;
     printf("%d", root->data);
     //Duyet tu trai sang phai
-    preorder(root->left);
+    preorderDFS(root->left);
     //Duyet tu phai sang trai
-    preorder(root->right);
+    preorderDFS(root->right);
 }
 int main() {
     Node* root = NULL;

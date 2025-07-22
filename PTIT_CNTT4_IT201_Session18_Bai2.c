@@ -15,8 +15,8 @@ Node* createNode(int data) {
 void preoderDFS(Node* root) {
     if (root == NULL) return;
     printf("%d", root->data);
-    preoder(root->left);
-    preoder(root->right);
+    preoderDFS(root->left);
+    preoderDFS(root->right);
 }
 int main() {
     //Xay dung thuat toan nhi phan preorder

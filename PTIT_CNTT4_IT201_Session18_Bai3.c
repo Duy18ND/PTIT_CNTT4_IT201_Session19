@@ -13,8 +13,8 @@ Node* createNode(int data) {
 }
 void postorderDFS(Node* root) {
     if (root == NULL) return;
-    postorder(root->left);
-    postorder(root->right);
+    postorderDFS(root->left);
+    postorderDFS(root->right);
     printf("%d ", root->data);
 }
 int main() {
