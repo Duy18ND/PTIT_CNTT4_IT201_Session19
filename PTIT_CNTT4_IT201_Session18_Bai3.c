@@ -10,6 +10,7 @@ Node* createNode(int data) {
     node->data = data;
     node->left = NULL;
     node->right = NULL;
+    return node;
 }
 void postorderDFS(Node* root) {
     if (root == NULL) return;

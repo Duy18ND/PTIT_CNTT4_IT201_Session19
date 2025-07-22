@@ -13,11 +13,11 @@ Node* createNode(int data) {
     return node;
 }
 
-void preoderDFS(Node* root) {
+void preorderDFS(Node* root) {
     if (root == NULL) return;
     printf("%d ", root->data);
-    preoderDFS(root->left);
-    preoderDFS(root->right);
+    preorderDFS(root->left);
+    preorderDFS(root->right);
 }
 
 int main() {
@@ -36,13 +36,13 @@ int main() {
     node2->right = node5;
 
     printf("Chua them\n");
-    preoderDFS(root);
+    preorderDFS(root);
     int value;
     printf("\nMoi ban them phan tu moi");
     scanf("%d", &value);
     Node* node6 = createNode(value);
     node2->left = node6;
     printf("\nKet qua sau khi them\n");
-    preoderDFS(root);
+    preorderDFS(root);
     return 0;
 }

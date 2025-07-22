@@ -48,7 +48,7 @@ Node* dequeue(Queue* queue) {
     return queue->arr[queue->front++];
 }
 //leverorder
-void leveroderDFS(Node* root) {
+void leverorderDFS(Node* root) {
     if (root == NULL) return;
     Queue* queue = createQueue(100);
     enqueue(queue, root);
@@ -78,6 +78,6 @@ int main() {
 
 
     printf("leverorder: \n");
-    leveroderDFS(root);
+    leverorderDFS(root);
     return 0;
 }

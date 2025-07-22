@@ -12,13 +12,13 @@ Node* createNode(int data) {
     node->right = NULL;
     return node;
 }
-int preoderDFS(Node* root, int value) {
+int preorderDFS(Node* root, int value) {
     if (root == NULL) return 0;
     if (root->data == value) return 1;
-    int fount = preoderDFS(root->left,value);
-    if (fount) return 1;
-    fount = preoderDFS(root->right,value);
-    return fount;
+    int found = preorderDFS(root->left,value);
+    if (found) return 1;
+    found = preorderDFS(root->right,value);
+    return found;
 }
 int main() {
     //Tim kiem nhi phan
@@ -35,7 +35,7 @@ int main() {
     int value;
     printf("Moi ban nhap so can tim: ");
     scanf("%d", &value);
-    if (preoderDFS(root, value)) {
+    if (preorderDFS(root, value)) {
         printf("True");
     }else {
         printf("False");
